@@ -3,19 +3,14 @@
 
 #define FIREBASE_HOST "trainproject1-ad5f4-default-rtdb.firebaseio.com"
 #define FIREBASE_AUTH "AIzaSyB8Uyqbhp_pq-Ir3B1BBVTCB4F3WFjcnPI"
-#define WIFI_SSID "lanaiphone"                                          
-#define WIFI_PASSWORD "asdfghjkl"                                   
+#define WIFI_SSID ""                                          
+#define WIFI_PASSWORD ""                                   
 #define SENSORS_NUM 4
 
 FirebaseData firebaseData;
 
-const int ProxSensor1 = 27;
-const int ProxSensor2 = 14;
-const int ProxSensor3 = 13;
-const int ProxSensor4 = 4;
-
-const int proxsensor[4] = {27, 14, 13, 4};
-const String sensor_name[4] = {"/Train/compartment0/seat1", "/Train/compartment0/seat2", "/Train/compartment0/seat3", "/Train/compartment0/seat4"};
+const int prox_sensors[SENSORS_NUM] = {27, 14, 13, 4};
+const String seat_path[SENSORS_NUM] = {"/Train/compartment0/seat1", "/Train/compartment0/seat2", "/Train/compartment0/seat3", "/Train/compartment0/seat4"};
 
 String send_data = "OFF";
 String read_data = "";
@@ -23,10 +18,10 @@ String read_data = "";
 void setup() {
 
   Serial.begin(9600);     
-  pinMode(ProxSensor1, INPUT);
-  pinMode(ProxSensor2, INPUT);
-  pinMode(ProxSensor3, INPUT);
-  pinMode(ProxSensor4, INPUT);
+  pinMode(prox_sensors[1], INPUT);
+  pinMode(prox_sensors[2], INPUT);
+  pinMode(prox_sensors[3], INPUT);
+  pinMode(prox_sensors[4], INPUT);
            
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);       
   Serial.print("Connecting to ");
@@ -57,7 +52,7 @@ void loop()
     // sensor 1
     send_data = "Empty";//OFF
 
-    if(digitalRead(proxsensor[i]) == LOW)
+    if(digitalRead(prox_sensors[i]) == LOW)
     {
       send_data = "Occupied";//ON
     }
@@ -65,7 +60,7 @@ void loop()
     {
       send_data = "Empty";
     }
-    if (Firebase.getString(firebaseData, sensor_name[i]))
+    if (Firebase.getString(firebaseData, seat_path[i]))
     {
       read_data = firebaseData.stringData();
     }
@@ -76,7 +71,7 @@ void loop()
 
     if (send_data != read_data)
     {
-      if (Firebase.setString(firebaseData, sensor_name[i], send_data)) 
+      if (Firebase.setString(firebaseData, seat_path[i], send_data)) 
       {   
         Serial.print("data ");
         Serial.print("'");               

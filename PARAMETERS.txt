@@ -1,5 +1,7 @@
 The parameters are at the top of the ESP32 code
 
 SENSORS_NUM: number of sensors connected to the arduino
-prox_sensors: a list of the pins the sensors are connected to in the arduino
-seat_path:a list of paths, for each sensor theres is a path to where to save the data in the database. 
+int prox_sensors []: a list of the pins the sensors are connected to in the arduino
+string seat_path []:a list of paths, for each sensor theres is a path to where to save the data in the database. 
+String send_data: a string to save in it the data to be sent to firebase according to the sensor.
+String read_data: a string to save in it the data read from firebase.

@@ -27,8 +27,8 @@ Along the platform, next to each compartment door, we show the state of this com
 ![hardware_diagram](https://github.com/lanajahshan/IoT_Trains_Project/assets/63874025/5e492832-551e-4070-ae75-b8bead7e2d74)
 
 # Arduino/ESP libraries installed for the project:
-Firebase ESP8266 Client - version 4.3.19
-Firebase Arduino Client Library for ESP8266 and ESP32 - version 4.3.20
+- Firebase ESP8266 Client - version 4.3.19
+- Firebase Arduino Client Library for ESP8266 and ESP32 - version 4.3.20
 
 # Project Poster:
 ![Train Project- IOT poster](https://github.com/lanajahshan/IoT_Trains_Project/assets/63874025/6875c0aa-4193-4105-be39-b9fc44807636)

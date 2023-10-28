@@ -33,5 +33,4 @@ Along the platform, next to each compartment door, we show the state of this com
 # Project Poster:
 ![Poster](https://github.com/lanajahshan/IoT_Trains_Project/assets/63874025/b09de44e-3d73-4f79-9432-00ee2640be66)
 
-This project is part of ICST - The Interdisciplinary Center for Smart Technologies, Taub Faculty of Computer Science, Technion https://icst.cs.technion.ac.il/![Uploading Poster.jpg…]()
-
+This project is part of ICST - The Interdisciplinary Center for Smart Technologies, Taub Faculty of Computer Science, Technion https://icst.cs.technion.ac.il/

@@ -31,6 +31,7 @@ Along the platform, next to each compartment door, we show the state of this com
 - Firebase Arduino Client Library for ESP8266 and ESP32 - version 4.3.20
 
 # Project Poster:
-![Train Project- IOT poster.pdf](https://github.com/lanajahshan/IoT_Trains_Project/files/13196516/Train.Project-.IOT.poster.pdf)
+![Poster](https://github.com/lanajahshan/IoT_Trains_Project/assets/63874025/b09de44e-3d73-4f79-9432-00ee2640be66)
 
-This project is part of ICST - The Interdisciplinary Center for Smart Technologies, Taub Faculty of Computer Science, Technion https://icst.cs.technion.ac.il/
+This project is part of ICST - The Interdisciplinary Center for Smart Technologies, Taub Faculty of Computer Science, Technion https://icst.cs.technion.ac.il/![Uploading Poster.jpg…]()
+
